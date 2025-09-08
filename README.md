@@ -3,22 +3,22 @@ This repo contains practice examples for learning and understanding Kubernetes (
 
 **What this project covers**
 
-Pods – the smallest deployable unit in Kubernetes
+**Pods** – the smallest deployable unit in Kubernetes
 
-ReplicaSets – ensure a specified number of pods are running
+**ReplicaSets** – ensure a specified number of pods are running
 
-Deployments – manage stateless applications
+**Deployments** – manage stateless applications
 
-Services – expose pods internally or externally
+**Services** – expose pods internally or externally
 
-ConfigMaps – store configuration data
+**ConfigMaps** – store configuration data
 
-Secrets – store sensitive data
+**Secrets** – store sensitive data
 
-Namespaces – organize resources logically
+**Namespaces** – organize resources logically
 
-Ingress – manage external access to services
+**Ingress** – manage external access to services
 
-Volumes & PersistentVolumeClaims (PVCs) – handle storage
+**Volumes & PersistentVolumeClaims (PVCs**) – handle storage
 
-Jobs & CronJobs – run batch or scheduled tasks
+**Jobs & CronJobs** – run batch or scheduled tasks
