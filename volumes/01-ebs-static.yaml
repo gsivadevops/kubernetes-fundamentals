@@ -12,7 +12,7 @@ spec:
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-0c6f9c2294bcd8001 #created volume id in AWS
+    volumeHandle: vol-0c6f9c2294bcd8001 #manually created volume id in AWS
 ---
 # Mount (Claim) the Volume - PVC
 apiVersion: v1

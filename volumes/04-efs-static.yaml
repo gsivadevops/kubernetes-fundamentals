@@ -14,7 +14,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0bce55c2a5841e18c
+    volumeHandle: fs-0349e3b09ce26c6f0 # manually created filesystem id in AWS
 ---
 # Mount (Claim) the Volume - PVC
 apiVersion: v1
