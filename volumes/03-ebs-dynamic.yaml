@@ -23,7 +23,7 @@ metadata:
 spec:
   # using the pod labels as node slector
   nodeSelector:
-    topology.kubernetes.io/zone: us-east-1c
+    topology.kubernetes.io/zone: us-east-1b
   containers:
   - name: nginx
     image: nginx
