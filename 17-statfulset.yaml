@@ -1,4 +1,4 @@
-# Headless Service - no ClusterIP
+# Headless Service - no ClusterIP, for internal communication between pods in a StatefulSet
 apiVersion: v1
 kind: Service
 metadata:
