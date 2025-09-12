@@ -1,0 +1,8 @@
+# Creating the disk automatically with Storage Class for EBS Dynamic Provisioning
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: roboshop-ebs
+reclaimPolicy: Retain
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer # disk will be created when pod is getting created
