@@ -5,6 +5,7 @@ metadata:
   name: efs-roboshop
 provisioner: efs.csi.aws.com
 reclaimPolicy: Retain 
+volumeBindingMode: WaitForFirstConsumer # default is Immediate - Volume is bound before any Pod starts using it.
 parameters:
   provisioningMode: efs-ap
   fileSystemId: fs-0061d9b0427b9b22e
