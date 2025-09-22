@@ -14,6 +14,7 @@ spec:
       labels:
         name: fluentd-elasticsearch
     spec:
+      # providing tolerations if we have any taints to nodes
       tolerations:
       # these tolerations are to have the daemonset runnable on control plane nodes
       # remove them if your control plane nodes should not run pods
@@ -41,6 +42,7 @@ spec:
       # preempts running Pods
       # priorityClassName: important
       terminationGracePeriodSeconds: 30
+      # volume defined here and giving the access to pods
       volumes:
       - name: varlog
         hostPath:
