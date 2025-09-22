@@ -1,0 +1,26 @@
+# Adding the stricy policy that mongodb should accepts the traffic only from the catalogue
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: mongodb-accept-catalogue
+  namespace: roboshop
+spec:
+  podSelector:
+    matchLabels:
+      # applying the network policy for the tier with database for component with mongodb
+      tier: database
+      component: mongodb
+  policyTypes:
+  - Ingress
+  # ingreee rule to allow the traffic only from the catalogue on mongodb port no - 27017
+  ingress:
+  - from:
+    - podSelector:
+        # what ever component having these labels, it will accept the traffic from that component, here it is catalogue
+        matchLabels:
+          component: catalogue
+          project: roboshop
+          tier: app
+    ports:
+    - protocol: TCP
+      port: 27017
