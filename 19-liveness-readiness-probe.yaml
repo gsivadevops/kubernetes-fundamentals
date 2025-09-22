@@ -8,11 +8,13 @@ spec:
   containers:
   - name: liveness
     image: nginx
+    # port no '80' is open for liveness
     livenessProbe:
       tcpSocket:
         port: 80
       initialDelaySeconds: 30
       periodSeconds: 10
+    # getting the response or not one port no 80  
     readinessProbe:
       httpGet:
         path: /
